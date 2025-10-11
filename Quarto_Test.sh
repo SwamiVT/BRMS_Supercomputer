@@ -20,4 +20,4 @@ echo "End of directory listing."
 
 
 
-~/bin/quarto render /scratch/ew49/vt0927/Bayesian/QuartoTest.qmd --to html 
+~/bin/quarto render /scratch/ew49/vt0927/Bayesian/QuartoTest2.qmd --to html 
