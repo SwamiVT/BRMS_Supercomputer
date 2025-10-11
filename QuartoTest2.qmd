@@ -1,0 +1,45 @@
+---
+title: "Quarto Test"
+format: "html"
+---
+
+# Testing the loading of the packages for the future sample
+
+```{r}
+#| warning: true
+#| output: true
+rm(list = ls())
+
+library(ggplot2); library(dplyr); library(brms)
+library(here) #for finding the root directory
+library(beepr) #alerting for when modelling is completed
+```
+
+# Testing the brms library
+
+```{r}
+set.seed(123)
+
+#Simulated Data
+n <- 100
+x <- rnorm(n)
+y <- 1.5 + 2 * x + rnorm(n, sd = 1)
+
+#dataframe
+dat <- data.frame(x = x, y = y)
+
+#Fitting Data
+fit <- brm(y ~ x, data = dat, family = gaussian(), chains = 2, iter = 1000)
+```
+
+## Summary
+```{r}
+summary(fit)
+```
+
+## Plotted Graph
+```{r}
+plot(fit)
+```
+
+lets see if this works now
