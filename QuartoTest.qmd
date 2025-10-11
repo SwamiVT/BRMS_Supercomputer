@@ -1,0 +1,18 @@
+---
+title: "Quarto Test"
+format: "html"
+---
+
+# Testing the loading of the packages for the future sample
+
+```{r}
+#| warning: true
+#| output: true
+rm(list = ls())
+
+library(ggplot2); library(dplyr); library(brms)
+library(here) #for finding the root directory
+library(beepr) #alerting for when modelling is completed
+```
+
+Are they loaded
